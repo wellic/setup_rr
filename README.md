@@ -1,6 +1,21 @@
 # setup_rr
 
 # Setup local ruby &amp; rails
+Setup variables in install_ruby_rails
+```
+
+VER_RUBY=2.2.1
+VER_RAILS=4.2.1
+
+```
+Start install:
+```
+Usage: ./install_ruby_rails.sh [-f]
+Parameters:
+  -h Help.
+  -f Force mode.
+     Remove dirs ~/.rbenv and ~/.gem before install.
+```
 
 ## After Install
 
