@@ -1,6 +1,6 @@
 # setup_rr
 
-# Setup local ruby &amp; rails
+# Setup local ruby &amp; rails on Ubuntu, Mint
 Setup variables in install_ruby_rails
 ```
 

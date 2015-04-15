@@ -3,6 +3,8 @@
 VER_RUBY=2.2.1
 VER_RAILS=4.2.1
 
+INSTALL_NODEJS=0
+
 set -e
 set -o nounset
 
@@ -181,6 +183,16 @@ check_install() {
   ruby -v
   echo_cmd "rails -v" 0
   rails -v
+  echo_cmd "nodejs -v" 0
+  nodejs -v
+  echo_cmd "npm -v" 0
+  npm -v
+}
+
+install_nodejs() {
+  echo_info 'curl -sL https://deb.nodesource.com/setup | sudo bash -'
+  curl -sL https://deb.nodesource.com/setup | sudo bash -
+  sudo apt-get install -y nodejs npm
 }
 
 show_start_mess
@@ -194,6 +206,7 @@ install_plugin_rbenv_ruby_build
 install_ruby
 install_gem_bundler
 install_rails
+install_nodejs
 
 check_install
 exit 0
@@ -205,3 +218,6 @@ exit 0
 #https://github.com/sstephenson/ruby-build
 #https://github.com/sstephenson/rbenv-gem-rehash
 
+#nodejs
+#https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager#debian-and-ubuntu-based-linux-distributions
+#http://developwithguru.com/how-to-install-node-js-and-npm-in-ubuntu-or-mint/
